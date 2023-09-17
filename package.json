@@ -1,0 +1,28 @@
+{
+	"name": "esbuild",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js",
+		"build:dev": "node esbuild.config.js -w",
+		"start": "node esbuild.dev.js -w",
+		"deploy": "gh-pages -d public"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"esbuild": "^0.19.3",
+		"esbuild-serve": "^1.0.1",
+		"gh-pages": "^6.0.0"
+	},
+	"dependencies": {
+		"@types/react": "^18.2.21",
+		"@types/react-dom": "^18.2.7",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"typescript": "^5.2.2"
+	}
+}
